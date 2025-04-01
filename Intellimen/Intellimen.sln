@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{E39F60A3-7C37-42CB-AF15-141B332078E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2D4D8259-9E68-40FF-9080-44E1CB317C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.API", "src\Backend\Intellimen.API\Intellimen.API.csproj", "{2807E442-1D86-444E-9E8D-4DFD96904DDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3} = {542832A5-80B7-459A-BE50-98EAA8CB2EF3}
+		{79C2D236-9A61-4D12-AE09-889614E89A6D} = {79C2D236-9A61-4D12-AE09-889614E89A6D}
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278} = {F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.Application", "src\Backend\Intellimen.Application\Intellimen.Application.csproj", "{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}"
+	ProjectSection(ProjectDependencies) = postProject
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3} = {542832A5-80B7-459A-BE50-98EAA8CB2EF3}
+		{79C2D236-9A61-4D12-AE09-889614E89A6D} = {79C2D236-9A61-4D12-AE09-889614E89A6D}
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7} = {BECF8D50-89B1-430A-B2B0-F398C1753FD7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.Domain", "src\Backend\Intellimen.Domain\Intellimen.Domain.csproj", "{BECF8D50-89B1-430A-B2B0-F398C1753FD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.Infrastructure", "src\Backend\Intellimen.Infrastructure\Intellimen.Infrastructure.csproj", "{811AAA20-7F47-4CFF-A726-41D39FAB3A4D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7} = {BECF8D50-89B1-430A-B2B0-F398C1753FD7}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.Communication", "src\Shared\Intellimen.Communication\Intellimen.Communication.csproj", "{79C2D236-9A61-4D12-AE09-889614E89A6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intellimen.Exceptions", "src\Shared\Intellimen.Exceptions\Intellimen.Exceptions.csproj", "{542832A5-80B7-459A-BE50-98EAA8CB2EF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2807E442-1D86-444E-9E8D-4DFD96904DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2807E442-1D86-444E-9E8D-4DFD96904DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2807E442-1D86-444E-9E8D-4DFD96904DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2807E442-1D86-444E-9E8D-4DFD96904DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811AAA20-7F47-4CFF-A726-41D39FAB3A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811AAA20-7F47-4CFF-A726-41D39FAB3A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811AAA20-7F47-4CFF-A726-41D39FAB3A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811AAA20-7F47-4CFF-A726-41D39FAB3A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79C2D236-9A61-4D12-AE09-889614E89A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79C2D236-9A61-4D12-AE09-889614E89A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79C2D236-9A61-4D12-AE09-889614E89A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79C2D236-9A61-4D12-AE09-889614E89A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E39F60A3-7C37-42CB-AF15-141B332078E5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2D4D8259-9E68-40FF-9080-44E1CB317C9B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2807E442-1D86-444E-9E8D-4DFD96904DDD} = {E39F60A3-7C37-42CB-AF15-141B332078E5}
+		{F8AFCB72-3F78-4ED8-A6F7-42E5798D4278} = {E39F60A3-7C37-42CB-AF15-141B332078E5}
+		{BECF8D50-89B1-430A-B2B0-F398C1753FD7} = {E39F60A3-7C37-42CB-AF15-141B332078E5}
+		{811AAA20-7F47-4CFF-A726-41D39FAB3A4D} = {E39F60A3-7C37-42CB-AF15-141B332078E5}
+		{79C2D236-9A61-4D12-AE09-889614E89A6D} = {2D4D8259-9E68-40FF-9080-44E1CB317C9B}
+		{542832A5-80B7-459A-BE50-98EAA8CB2EF3} = {2D4D8259-9E68-40FF-9080-44E1CB317C9B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1664E6AC-B38D-4BB6-B0F3-0B078614CBA4}
+	EndGlobalSection
+EndGlobal
