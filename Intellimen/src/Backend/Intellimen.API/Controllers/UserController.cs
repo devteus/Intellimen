@@ -1,4 +1,5 @@
-﻿using Intellimen.Communication.Requests;
+﻿using Intellimen.Application.UseCases.Usuario.Registrar;
+using Intellimen.Communication.Requests;
 using Intellimen.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,9 @@ public class UserController : ControllerBase
     [ProducesResponseType(typeof(ResponseRegistrarUsuarioJson), StatusCodes.Status201Created)]
     public IActionResult Registrar(RequestRegistrarUsuarioJson request)
     {
-        return Created();
+        var useCase = new RegistrarUsuarioUseCase();
+        var result = useCase.Execute(request);
+
+        return Created(string.Empty, result);
     }
 }

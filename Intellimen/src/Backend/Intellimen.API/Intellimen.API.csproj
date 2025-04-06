@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<InvariantGlobalization>false</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Intellimen.Communication\Intellimen.Communication.csproj" />
+    <ProjectReference Include="..\Intellimen.Application\Intellimen.Application.csproj" />
   </ItemGroup>
 
 </Project>

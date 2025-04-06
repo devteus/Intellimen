@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Intellimen.Communication\Intellimen.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\Intellimen.Exceptions\Intellimen.Exceptions.csproj" />
+  </ItemGroup>
+
 </Project>
