@@ -1,11 +1,11 @@
 ﻿using Intellimen.Communication.Requests;
 using Intellimen.Communication.Responses;
 
-namespace Intellimen.Application.UseCases.Usuario.Registrar;
+namespace Intellimen.Application.UseCases.User.Register;
 
-public class RegistrarUsuarioUseCase
+public class RegisterUserUseCase
 {
-    public ResponseRegistrarUsuarioJson Execute(RequestRegistrarUsuarioJson request)
+    public ResponseRegisterUserJson Execute(RequestRegisterUserJson request)
     {
         // Validar a request
         Validate(request);
@@ -16,16 +16,16 @@ public class RegistrarUsuarioUseCase
 
         // Salvar no Banco de dados
 
-        return new ResponseRegistrarUsuarioJson
+        return new ResponseRegisterUserJson
         {
             Nome = request.Nome
         };
     }
 
-    private void Validate(RequestRegistrarUsuarioJson request)
+    private void Validate(RequestRegisterUserJson request)
     {
-        var validar = new RegistrarUsuarioValidator();
-        var result = validar.Validate(request);
+        var valid = new RegisterUserValidator();
+        var result = valid.Validate(request);
 
         if(result.IsValid == false)
         {
