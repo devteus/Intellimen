@@ -1,4 +1,6 @@
-﻿using System.Security.Cryptography;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Intellimen.Business.Util
@@ -15,6 +17,20 @@ namespace Intellimen.Business.Util
                 System.Security.Cryptography.SHA256.Create();
             return BitConverter.ToString(hash.ComputeHash(input))
             .Replace("-", "").ToLower();
+        }
+
+        public static bool TryGetClaim(this ClaimsPrincipal? claims, string? claimId,
+           [MaybeNullWhen(false)] out string? value)
+        {
+            string? valRef = claims.FindFirstValue(claimId);
+            if (!string.IsNullOrEmpty(valRef))
+            {
+                value = valRef;
+                return true;
+            }
+
+            value = default;
+            return false;
         }
     }
 }

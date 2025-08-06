@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Services\Background\" />
   </ItemGroup>
 
@@ -23,10 +22,25 @@
     <ProjectReference Include="..\Intellimen.Repository\Intellimen.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="MessagesExceptions\DefaultExceptions.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DefaultExceptions.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 <ItemGroup>
 	<Content Update="NLog.config">
 		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Content>
+</ItemGroup>
+
+<ItemGroup>
+  <EmbeddedResource Update="MessagesExceptions\DefaultExceptions.resx">
+    <Generator>PublicResXFileCodeGenerator</Generator>
+    <LastGenOutput>DefaultExceptions.Designer.cs</LastGenOutput>
+  </EmbeddedResource>
 </ItemGroup>
 
 </Project>

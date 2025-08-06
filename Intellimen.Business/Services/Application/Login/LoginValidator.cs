@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Intellimen.Business.MessagesExceptions;
 using Intellimen.Business.Requests;
 
 namespace Intellimen.Business.Services.Application.Login
@@ -8,8 +9,8 @@ namespace Intellimen.Business.Services.Application.Login
         public LoginValidator()
         {
             RuleFor(x => x.Email)
-                .NotEmpty().WithMessage("Email é obrigatório")
-                .EmailAddress().WithMessage("Formato de email inválido");
+                .NotEmpty().WithMessage(DefaultExceptions.EMAIL_EMPTY)
+                .EmailAddress().WithMessage(DefaultExceptions.INVALID_EMAIL);
         }
     }
 }

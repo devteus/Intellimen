@@ -1,4 +1,5 @@
-﻿using Intellimen.Business.Util;
+﻿using Intellimen.Business.Services.Application.Login;
+using Intellimen.Business.Util;
 using Intellimen.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,8 @@ namespace Intellimen
 
             builder.Services.AddDbContext<IntellimenDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Intellimen")));
+
+            AddServices(builder);
 
             return builder;
         }
@@ -30,5 +33,9 @@ namespace Intellimen
             }
         }
 
+        private static void AddServices(WebApplicationBuilder builder)
+        {
+            builder.Services.AddScoped<ILoginService, LoginService>();
+        }
     }
 }
